@@ -11,6 +11,7 @@ countries_dict={'China':143,'India':136,'USA':32,'Pakistan':21}
 
 
 # Write a program that asks user for three type of inputs,
+
 print('Type print to print all countries with their population')
 print('Type add to add a country to existing dictionary')
 print('Type remove to remove a country from existing dictionary')
@@ -27,6 +28,7 @@ if user_input=='print':
 # usa==>32
 # pakistan==>21
 # add: if user input add then it should further ask for a country name to add. If country already exist in our dataset then it should print that it exist and do nothing. If it doesn't then it asks for population and add that new country/population in our dictionary and print it
+
 elif user_input=='add':
     country_name=input('Enter country name to add to dictionary')
     if country_name in countries_dict:
@@ -35,7 +37,9 @@ elif user_input=='add':
          country_population=int(input('Enter population of that country'))
          countries_dict[country_name]=country_population
          print(f'The dictionary after adding {country_name} is {countries_dict}')
+
 # remove: when user inputs remove it should ask for a country to remove. If country exist in our dictionary then remove it and print new dictionary using format shown above in (a). Else print that country doesn't exist!
+
 elif user_input=='remove':
     country_name=input('Enter country name to remove from dictionary')
     if country_name in countries_dict:
@@ -45,6 +49,7 @@ elif user_input=='remove':
             print(f"{country}==>{population}")
     else:
          print('The dictionary after adding is ',countries_dict)
+
 # query: on this again ask user for which country he or she wants to query. When user inputs that country it will print population of that country.
 
 print('Type country name to print its population')
@@ -94,3 +99,20 @@ if stock_operation=='print':
     prinT(stocks_dict)
 elif stock_operation=='add':
     add(stocks_dict)
+
+
+# Write circle_calc() function that takes radius of a circle as an input from user and then it calculates and returns area, circumference and diameter. You should get these values in your main program by calling circle_calc function and then print them
+
+radius=float(input('Enter radius of circle'))
+
+
+def circle_calc(radius):
+    area=3.14*(radius**2)
+    circumference=2*3.13*radius
+    diameter=2*radius
+    circle_info=(area,circumference,diameter)
+    return circle_info
+
+area,circumference,diamter=circle_calc(radius)
+
+print(f'Area={area} , Circumference={circumference} , Diameter={diamter}')
